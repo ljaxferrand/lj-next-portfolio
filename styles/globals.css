@@ -1,6 +1,5 @@
 @font-face {
   font-family: "Rokkitt";
-  font-display: optional;
   src: url("/fonts/rokkitt-regular.woff2") format("woff2");
 }
 
@@ -13,16 +12,38 @@
 
 @layer base {
   ::selection {
-    background: #c8d0b9;
+    background: #2ec4b6;
   }
 
   html {
     font-family: "Inter", sans-serif;
+    @apply text-offBlack;
     scroll-behavior: smooth;
   }
 
   body {
     overscroll-behavior: none;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading subpixel-antialiased;
+  }
+
+  p {
+    @apply text-lg;
   }
 }
 

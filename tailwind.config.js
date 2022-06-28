@@ -4,9 +4,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      heading: ["Rokkitt", "serif"],
-    },
     screens: {
       xs: "320px",
       s: "485px",
@@ -16,6 +13,9 @@ module.exports = {
       xl: "1280px",
     },
     extend: {
+      fontFamily: {
+        heading: ["Rokkitt", "serif"],
+      },
       colors: {
         primaryAccent: "#2EC4B6",
         offBlack: "#1F0322",

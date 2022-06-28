@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "Rokkitt";
+  font-display: optional;
+  src: url("/fonts/rokkitt-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("/fonts/inter-light.woff2");
+}
+
 @tailwind base;
+
+@layer base {
+  ::selection {
+    background: #c8d0b9;
+  }
+
+  html {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;

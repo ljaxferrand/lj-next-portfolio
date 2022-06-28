@@ -7,7 +7,7 @@ export const headerMenu = [
   {
     id: 2,
     name: "Work",
-    href: "/",
+    href: "/work",
   },
   {
     id: 3,
@@ -17,6 +17,6 @@ export const headerMenu = [
   {
     id: 4,
     name: "Contact",
-    href: "/",
+    href: "/contact",
   },
 ];

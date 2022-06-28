@@ -12,11 +12,11 @@ const Home = ({ homeData }) => {
       <div className="container mx-auto flex items-center justify-around pt-16">
         <div>
           <h1 className="text-6xl">{homeData.acf.intro}</h1>
-          <p>{homeData.acf.short_about}</p>
+          <p className="pt-4">{homeData.acf.short_about}</p>
         </div>
 
         <img
-          className="w-96  rounded-full"
+          className="w-96  rounded-full shadow-lg"
           src={homeData.acf.owner_image.url}
           alt={homeData.acf.owner_image.alt}
         />

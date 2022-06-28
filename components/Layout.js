@@ -1,10 +1,10 @@
-import Head from "next/head";
+import Header from "./Header";
 
 export default function Layout({ children }) {
-  <>
-    {/* <Head>
-      <meta name="theme-color" content="#ffffff"></meta>
-    </Head> */}
-    <main>{children}</main>;
-  </>;
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
+  );
 }

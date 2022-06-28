@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import globalData from "../utilities/globalData.preval";
 import Link from "next/link";
+import { headerMenu } from "./menuItems";
 
 const Header = () => {
   return (
@@ -17,11 +18,13 @@ const Header = () => {
 
       <nav>
         <ul>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
+          {headerMenu.map((item) => (
+            <li key={item.id}>
+              <Link href={item.href}>
+                <a>{item.name}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

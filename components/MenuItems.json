@@ -1,0 +1,21 @@
+{
+    "header": {
+      "item-1": {
+        "name": "Home",
+        "href": "'/'"
+      },
+      "item-2": {
+        "name": "Work",
+        "href": "'/'"
+      },
+      "item-3": {
+        "name": "About",
+        "href": "'/'"
+      },
+      "item-4": {
+        "name": "Contact",
+        "href": "'/'"
+      }
+  }
+}
+  

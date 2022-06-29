@@ -1,7 +1,7 @@
-const SingleProject = () => {
+const SingleProject = ({ workInfo }) => {
   return (
     <>
-      <div>SingleProject</div>
+      <div>{workInfo.acf.project_title}</div>
     </>
   );
 };

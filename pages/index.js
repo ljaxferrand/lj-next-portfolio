@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import axios from "axios";
 import Head from "next/head";
+import ProjectList from "../components/ProjectList";
 
-const Home = ({ homeData }) => {
+const Home = ({ homeData, allWorks }) => {
   return (
     <>
       <Head>
@@ -16,11 +17,16 @@ const Home = ({ homeData }) => {
         </div>
 
         <img
-          className="w-96  rounded-full shadow-lg"
+          className="w-96  rounded-full shadow-2xl"
           src={homeData.acf.owner_image.url}
           alt={homeData.acf.owner_image.alt}
         />
       </div>
+
+      <section id="work" className="pt-8">
+        <h2 className="text-center text-4xl">Work</h2>
+        <ProjectList data={allWorks} />
+      </section>
     </>
   );
 };
@@ -33,12 +39,12 @@ export async function getStaticProps() {
   );
   const homeData = responseHome.data;
 
-  // const responseAllWork = await axios.get(
-  //   `https://`
-  // );
-  // const allWorks = responseAllWork.data;
+  const responseAllWork = await axios.get(
+    `https://staging6.ljferrand.com/wp-json/wp/v2/lj-project?_fields=id,slug,acf&acf_format=standard`
+  );
+  const allWorks = responseAllWork.data;
 
   return {
-    props: { homeData },
+    props: { homeData, allWorks },
   };
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 const WorkPage = () => {
   return (
-    <>
-      <div>WorkPage</div>
-    </>
+    <div id="main-content">
+      <h1>WorkPage</h1>
+    </div>
   );
 };
 

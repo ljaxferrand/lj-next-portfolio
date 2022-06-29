@@ -6,6 +6,9 @@ import { headerMenu } from "./menuItems";
 const Header = () => {
   return (
     <header>
+      <a className="skip-link screen-reader-text" href="#main-content">
+        Skip to Content
+      </a>
       <div className="flex items-center justify-between">
         <div className="flex pl-4 items-center">
           <Link href="/">

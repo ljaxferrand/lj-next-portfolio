@@ -10,23 +10,26 @@ const Home = ({ homeData, allWorks }) => {
         <title>{homeData.acf.seo_title}</title>
         <meta name="description" content={homeData.acf.seo_description}></meta>
       </Head>
-      <div className="container mx-auto flex items-center justify-around pt-16">
-        <div>
-          <h1 className="text-6xl">{homeData.acf.intro}</h1>
-          <p className="pt-4">{homeData.acf.short_about}</p>
+
+      <div id="main-content">
+        <div className="container mx-auto flex items-center justify-around pt-16">
+          <div>
+            <h1 className="text-6xl">{homeData.acf.intro}</h1>
+            <p className="pt-4">{homeData.acf.short_about}</p>
+          </div>
+
+          <img
+            className="w-96  rounded-full shadow-2xl"
+            src={homeData.acf.owner_image.url}
+            alt={homeData.acf.owner_image.alt}
+          />
         </div>
 
-        <img
-          className="w-96  rounded-full shadow-2xl"
-          src={homeData.acf.owner_image.url}
-          alt={homeData.acf.owner_image.alt}
-        />
+        <section id="work" className="pt-8">
+          <h2 className="text-center text-4xl">Work</h2>
+          <ProjectList data={allWorks} />
+        </section>
       </div>
-
-      <section id="work" className="pt-8">
-        <h2 className="text-center text-4xl">Work</h2>
-        <ProjectList data={allWorks} />
-      </section>
     </>
   );
 };

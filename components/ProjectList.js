@@ -5,15 +5,15 @@ const ProjectList = ({ data }) => {
       {data.map((project) => (
         <li
           key={project.id}
-          className="mx-auto lg:flex justify-center gap-4 p-4 m-4"
+          className="mx-auto lg:flex justify-center gap-4 p-4 m-4 group"
         >
-          <div className="shadow-2xl rounded-md overflow-hidden ">
+          <div className="w-96 h-96 shadow-2xl rounded-md overflow-hidden group-odd:order-2">
             <img
               className="w-96 h-96 object-cover"
-              src={project.acf.project_images.project_image_1.url}
+              src={project.acf.project_featured_img.url}
               alt={
-                project.acf.project_images.project_image_1.alt ||
-                project.acf.project_images.project_image_1.filename
+                project.acf.project_featured_img.alt ||
+                project.acf.project_featured_img.filename
               }
             />
           </div>

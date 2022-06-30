@@ -17,9 +17,12 @@ module.exports = {
         heading: ["Rokkitt", "serif"],
       },
       colors: {
-        primaryAccent: "#2EC4B6",
+        primaryAccent: "#8A1C7C",
+        secondaryAccent: "#0e6ba8",
+        tertiaryAccent: "#BBDBCC",
         offBlack: "#1F0322",
         offWhite: "#FFFAFA",
+        lightGrey: "#848FA5",
       },
     },
   },

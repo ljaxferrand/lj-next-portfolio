@@ -32,8 +32,6 @@ export async function getStaticPaths() {
     return { params: { id: work.id.toString() } };
   });
 
-  console.log(paths);
-
   return {
     paths,
     fallback: false,

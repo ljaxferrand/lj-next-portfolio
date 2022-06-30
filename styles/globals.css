@@ -15,6 +15,7 @@
 
   body {
     overscroll-behavior: none;
+    @apply dark:text-offWhite dark:bg-[#121212];
   }
 
   h1 {

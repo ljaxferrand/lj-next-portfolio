@@ -2,6 +2,7 @@
 import globalData from "../utilities/globalData.preval";
 import Link from "next/link";
 import { headerMenu } from "./menuItems";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
@@ -32,6 +33,9 @@ const Header = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <ThemeToggle />
+            </li>
           </ul>
         </nav>
       </div>

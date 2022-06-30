@@ -14,7 +14,7 @@ const Home = ({ homeData, allWorks }) => {
       <div id="main-content">
         <div className="container mx-auto flex items-center justify-around pt-16">
           <div>
-            <h1 className="text-6xl">{homeData.acf.intro}</h1>
+            <h1 className="text-6xl ">{homeData.acf.intro}</h1>
             <p className="pt-4">{homeData.acf.short_about}</p>
           </div>
 

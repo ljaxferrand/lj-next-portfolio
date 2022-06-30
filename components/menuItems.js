@@ -4,11 +4,11 @@ export const headerMenu = [
     name: "Home",
     href: "/",
   },
-  {
-    id: 2,
-    name: "Work",
-    href: "/work",
-  },
+  // {
+  //   id: 2,
+  //   name: "Work",
+  //   href: "/work",
+  // },
   {
     id: 3,
     name: "About",

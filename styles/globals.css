@@ -7,15 +7,13 @@
 
   html {
     font-family: "Anek Malayalam", sans-serif;
-
-    @apply text-offBlack;
-    @apply tracking-wider;
     scroll-behavior: smooth;
   }
 
   body {
     overscroll-behavior: none;
-    @apply dark:text-offWhite dark:bg-[#121212];
+    @apply text-offBlack bg-offWhite tracking-wider transition-colors;
+    @apply dark:transition-colors dark:text-offWhite dark:bg-[#222222];
   }
 
   h1 {

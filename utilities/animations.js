@@ -20,9 +20,7 @@ export const quickSlide = {
   animate: {
     x: 0,
     opacity: 1,
-    type: "tween",
-    ease: "easeOut",
-    transition: { delay: 0.2, duration: 0.6 },
+    transition: { type: "tween", ease: "backInOut", delay: 0.3, duration: 0.9 },
   },
 };
 

@@ -7,7 +7,7 @@ export const fadeIn = {
     y: 0,
     opacity: 1,
     type: "tween",
-    ease: "easeOut",
+    ease: "easeIn",
     transition: { duration: 0.8 },
   },
 };

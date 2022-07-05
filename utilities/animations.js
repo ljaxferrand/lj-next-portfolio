@@ -31,3 +31,17 @@ export const inView = {
     duration: 0.8,
   },
 };
+
+export const errorShake = {
+  animate: {
+    x: [0, -4],
+    transition: { yoyo: 3, stiffness: 1000, duration: 0.2 },
+  },
+};
+
+export const successBounce = {
+  animate: {
+    y: [0, 4],
+    transition: { yoyo: 3, stiffness: 1000, duration: 0.2 },
+  },
+};

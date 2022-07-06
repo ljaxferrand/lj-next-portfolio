@@ -3,6 +3,7 @@ import globalData from "../utilities/globalData.preval";
 import Link from "next/link";
 import { headerMenu } from "./menuItems";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
@@ -14,11 +15,7 @@ const Header = () => {
         <div className="flex pl-4 pt-4 items-center">
           <Link href="/">
             <a>
-              <img
-                className="p-4 w-24"
-                src={globalData.acf.logo.url}
-                alt={globalData.acf.logo.url}
-              />
+              <Logo />
             </a>
           </Link>
           <p className="font-heading text-2xl">{globalData.acf.site_title}</p>

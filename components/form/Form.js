@@ -39,7 +39,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             onChange={(e) => handleFieldChange("your-name", e)}
             type="text"
-            className="peer border-b-2 rounded-sm border-darkBlue p-1 hover:bg-accentLight focus:bg-accentLight"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">
@@ -59,7 +59,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             onChange={(e) => handleFieldChange("your-email", e)}
             type="email"
-            className="peer border-b-2 rounded-sm border-darkBlue p-1 hover:bg-accentLight focus:bg-accentLight"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">
@@ -78,7 +78,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             onChange={(e) => handleFieldChange("your-subject", e)}
             type="text"
-            className="peer border-b-2 rounded-sm border-darkBlue p-1 hover:bg-accentLight focus:bg-accentLight"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">
@@ -96,7 +96,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             rows="6"
             onChange={(e) => handleFieldChange("your-message", e)}
-            className="peer border-b-2 rounded-sm border-darkBlue p-1 hover:bg-accentLight focus:bg-accentLight"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">
@@ -110,7 +110,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             variants={errorShake}
             animate="animate"
             initial="initial"
-            className="bg-red-400 p-2 rounded-lg mb-4"
+            className="bg-red-400 p-2 rounded-lg mb-4 dark:text-offBlack"
           >
             {hasError}
           </motion.aside>
@@ -120,7 +120,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             variants={successBounce}
             animate="animate"
             initial="initial"
-            className="bg-primaryGreen p-2 rounded-lg mb-4"
+            className="bg-yellowBG p-2 rounded-lg mb-4 dark:text-offBlack"
           >
             Thanks for your message. I&apos;ll reach out shortly!
           </motion.aside>
@@ -131,7 +131,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
           className="flex self-end"
         >
           <input
-            className="cursor-pointer w-16 drop-shadow-2xl py-2 px-3 rounded text-white bg-darkBlue"
+            className="cursor-pointer w-16 drop-shadow-2xl py-2 px-3 rounded text-white bg-lightGrey"
             type="submit"
             value="Send"
           />

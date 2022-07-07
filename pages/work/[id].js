@@ -1,10 +1,10 @@
 import axios from "axios";
 import SingleProject from "../../components/SingleProject";
 
-const WorkPage = ({ workInfo }) => {
+const WorkPage = ({ workInfo, posts }) => {
   return (
     <div id="main-content">
-      <SingleProject workInfo={workInfo} />
+      <SingleProject workInfo={workInfo} projectPagination={posts} />
     </div>
   );
 };
@@ -13,12 +13,17 @@ export default WorkPage;
 
 export async function getStaticProps({ params }) {
   const responseSingleWork = await axios.get(
-    `https://staging6.ljferrand.com/wp-json/wp/v2/lj-project/${params.id}?_fields=id,slug,acf&acf_format=standard`
+    `https://staging6.ljferrand.com/wp-json/wp/v2/lj-project/${params.id}?_fields=id,slug,next,previous,acf&acf_format=standard`
+  );
+
+  const pagination = await axios.get(
+    "https://staging6.ljferrand.com/wp-json/wp/v2/lj-project?_fields=id,slug"
   );
 
   return {
     props: {
       workInfo: responseSingleWork.data,
+      posts: pagination.data,
     },
   };
 }

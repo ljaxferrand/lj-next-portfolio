@@ -1,4 +1,6 @@
-const SingleProject = ({ workInfo }) => {
+import Pagination from "./Pagination";
+
+const SingleProject = ({ workInfo, projectPagination }) => {
   return (
     <div id="main-content">
       <h1>{workInfo.acf.project_title}</h1>
@@ -10,6 +12,12 @@ const SingleProject = ({ workInfo }) => {
         id="post-content"
         dangerouslySetInnerHTML={{ __html: workInfo.acf.project_content }}
       ></div>
+      <Pagination
+        current={workInfo.id}
+        prev={workInfo.previous}
+        next={workInfo.next}
+        counter={projectPagination}
+      />
     </div>
   );
 };

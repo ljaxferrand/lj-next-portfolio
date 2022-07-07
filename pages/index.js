@@ -19,7 +19,8 @@ const Home = ({ homeData, allWorks }) => {
           </div>
 
           <img
-            className="w-96 rounded-full shadow-2xl"
+            id="bio-img-home"
+            className="w-96 shadow-2xl"
             src={homeData.acf.owner_image.url}
             alt={homeData.acf.owner_image.alt}
           />

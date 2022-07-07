@@ -16,12 +16,12 @@ const ProjectList = ({ data }) => {
         >
           <Link href={`/work/?id=${project.id}`} as={`/work/${project.id}`}>
             <a className="flex flex-col items-center lg:items-start lg:flex-row gap-12">
-              <div className="w-96 h-96 shadow-2xl rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-yellowBG group-odd:bg-primaryAccent">
+              <div className="w-96 h-96 shadow-2xl rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-secondaryAccent group-odd:bg-primaryAccent">
                 <motion.img
                   initial={quickSlide.initial}
                   whileInView={quickSlide.animate}
                   viewport={{ once: true }}
-                  className="w-96 h-96 object-cover group-even:bg-yellowBG group-odd:bg-primaryAccent"
+                  className="w-96 h-96 object-cover group-even:bg-secondaryAccent group-odd:bg-primaryAccent"
                   src={project.acf.project_featured_img.url}
                   alt={
                     project.acf.project_featured_img.alt ||

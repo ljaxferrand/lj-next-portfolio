@@ -2,7 +2,8 @@
 
 @layer base {
   ::selection {
-    background: #2ec4b6;
+    background: #e7bb41;
+    @apply text-offBlack;
   }
 
   html {
@@ -39,6 +40,10 @@
 
   p {
     @apply text-xl py-4;
+  }
+
+  #bio-img-home {
+    border-radius: 49% 51% 16% 84% / 62% 30% 70% 38%;
   }
 
   /* Text meant only for screen readers. */

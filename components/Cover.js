@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 const Cover = ({ title, description }) => {
   return (
-    <section className="text-white bg-gray-900">
+    <section className="text-white bg-primaryDarker">
       <div className="max-w-screen-xl px-4 py-32 mx-auto lg:h-60 lg:items-center lg:flex ">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-teal-300 via-blue-500 to-purple-600">

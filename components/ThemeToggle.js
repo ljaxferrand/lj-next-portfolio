@@ -1,5 +1,7 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { buttonPress } from "../utilities/animations";
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -14,7 +16,10 @@ const ThemeToggle = () => {
   }
 
   return (
-    <button
+    <motion.button
+      whileHover={buttonPress.hover}
+      whileTap={buttonPress.tap}
+      initial={buttonPress.initial}
       className="px-4 pb-4 pt-2"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
@@ -49,7 +54,7 @@ const ThemeToggle = () => {
           />
         </svg>
       )}
-    </button>
+    </motion.button>
   );
 };
 

@@ -45,3 +45,16 @@ export const successBounce = {
     transition: { yoyo: 3, stiffness: 1000, duration: 0.2 },
   },
 };
+
+export const buttonPress = {
+  hover: {
+    scale: 1.1,
+    rotate: 5,
+  },
+  tap: {
+    scale: 0.9,
+  },
+  initial: {
+    scale: 1,
+  },
+};

@@ -39,7 +39,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             onChange={(e) => handleFieldChange("your-name", e)}
             type="text"
-            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 bg-offWhite hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">
@@ -59,7 +59,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             onChange={(e) => handleFieldChange("your-email", e)}
             type="email"
-            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 bg-offWhite hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">
@@ -78,7 +78,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             onChange={(e) => handleFieldChange("your-subject", e)}
             type="text"
-            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 bg-offWhite hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">
@@ -96,7 +96,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
             required
             rows="6"
             onChange={(e) => handleFieldChange("your-message", e)}
-            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
+            className="peer border-b-2 rounded-sm border-tertiaryAccent p-1 bg-offWhite hover:bg-tertiaryAccent dark:hover:text-offBlack focus:bg-tertiaryAccent dark:focus:text-offBlack"
           />
           {hasError ? (
             <p className="invisible peer-invalid:visible text-red-700 font-light">

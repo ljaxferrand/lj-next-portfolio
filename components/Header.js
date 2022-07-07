@@ -7,7 +7,7 @@ import Logo from "./Logo";
 
 const Header = () => {
   return (
-    <header>
+    <header className="z-50 sticky top-0 bg-offWhite dark:bg-gray-900 shadow-md ">
       <a className="skip-link screen-reader-text" href="#main-content">
         Skip to Content
       </a>

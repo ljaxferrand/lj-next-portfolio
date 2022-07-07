@@ -2,14 +2,18 @@ const Logo = () => {
   return (
     <>
       <svg
-        className="w-20 h-20 stroke-offBlack dark:stroke-offWhite"
+        className="w-16 h-16 m-4 stroke-offBlack dark:stroke-offWhite"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 646 521"
       >
-        <path
-          strokeWidth={12}
-          strokeLinecap="round"
-          d="M 301 452 L 266 392,
+        <filter id="shadow" colorInterpolationFilters="sRGB">
+          <feDropShadow dx="4" dy="6" stdDeviation="3" floodOpacity="0.5" />
+        </filter>
+        <g filter="url(#shadow)">
+          <path
+            strokeWidth={12}
+            strokeLinecap="round"
+            d="M 301 452 L 266 392,
           M 301 452 L 265 515,
           M 266 392 L 195 392,
           M 301 452 L 158 452,
@@ -33,7 +37,8 @@ const Logo = () => {
           M 418 452 L 361 361,
           M 398 361 L 361 361,
           M 361 361 L 323 428"
-        />
+          />
+        </g>
       </svg>
     </>
   );

@@ -12,7 +12,7 @@ const Header = () => {
         Skip to Content
       </a>
       <div className="flex items-center justify-between">
-        <div className="flex pl-4 pt-4 items-center">
+        <div className="flex pl-2  items-center">
           <Link href="/">
             <a>
               <Logo />

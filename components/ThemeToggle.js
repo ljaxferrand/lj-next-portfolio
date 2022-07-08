@@ -40,7 +40,7 @@ const ThemeToggle = () => {
         </svg>
       ) : (
         <svg
-          className="w-8 h-8 fill-yellowBG stroke-offBlack drop-shadow-lg  border-2 border-offBlack rounded"
+          className="w-8 h-8 fill-yellowBG stroke-offBlack drop-shadow-2xl shadow-offBlack  border-2 border-offBlack rounded"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

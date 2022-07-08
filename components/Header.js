@@ -9,7 +9,7 @@ import { buttonPress } from "../utilities/animations";
 
 const Header = () => {
   return (
-    <header className="z-50 sticky top-0 bg-offWhite dark:bg-gray-900 shadow-md">
+    <header className="z-50 sticky top-0 bg-offWhite dark:bg-darkestAccent shadow-md">
       <a className="skip-link screen-reader-text" href="#main-content">
         Skip to Content
       </a>

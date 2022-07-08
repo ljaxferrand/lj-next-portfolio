@@ -9,10 +9,10 @@ const Pagination = ({ next, prev, counter, current }) => {
   };
 
   return (
-    <div className="flex items-center justify-center space-x-3">
-      {next && (
+    <div className="pb-4 flex items-center justify-center space-x-3">
+      {next ? (
         <Link href={`/work/?id=${next.id}` || null} as={`/work/${next.id}`}>
-          <a className="inline-flex items-center justify-center w-8 h-8 border border-gray-100 rounded">
+          <a className="inline-flex items-center justify-center w-8 h-8 border border-offBlack dark:border-offWhite rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-3 h-3"
@@ -27,6 +27,8 @@ const Pagination = ({ next, prev, counter, current }) => {
             </svg>
           </a>
         </Link>
+      ) : (
+        <span className="w-8"></span>
       )}
 
       <p className="text-xs">
@@ -35,9 +37,9 @@ const Pagination = ({ next, prev, counter, current }) => {
         {counter.length}
       </p>
 
-      {prev && (
+      {prev ? (
         <Link href={`/work/?id=${prev.id}` || null} as={`/work/${prev.id}`}>
-          <a className="inline-flex items-center justify-center w-8 h-8 border border-gray-100 rounded">
+          <a className="inline-flex items-center justify-center w-8 h-8 border border-offBlack dark:border-offWhite rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-3 h-3"
@@ -52,6 +54,8 @@ const Pagination = ({ next, prev, counter, current }) => {
             </svg>
           </a>
         </Link>
+      ) : (
+        <span className="w-8"></span>
       )}
     </div>
   );

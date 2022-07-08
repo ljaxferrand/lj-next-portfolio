@@ -99,7 +99,7 @@
   }
 
   #post-content a {
-    @apply underline underline-offset-2 decoration-wavy decoration-secondaryAccent hover:bg-tertiaryAccent;
+    @apply underline underline-offset-2 decoration-wavy decoration-primaryAccent dark:decoration-tertiaryAccent dark:hover:bg-tertiaryAccent/70 hover:bg-tertiaryAccent dark:hover:text-offBlack;
   }
 }
 

@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-darkestAccent">
       <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex flex-col items-center gap-4 p-6 bg-tertiaryAccent rounded-lg shadow-lg sm:flex-row sm:justify-between">
-            <strong className="text-xl text-offBlack sm:text-xl">
+            <strong className="text-xl text-white sm:text-xl">
               Make Your Next Career Move!
             </strong>
 

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { buttonNoTurn } from "../utilities/animations";
 
 const Pagination = ({ next, prev, counter, current }) => {
   // to display current page number
@@ -11,8 +13,17 @@ const Pagination = ({ next, prev, counter, current }) => {
   return (
     <div className="pb-4 flex items-center justify-center space-x-3">
       {next ? (
-        <Link href={`/work/?id=${next.id}` || null} as={`/work/${next.id}`}>
-          <a className="inline-flex items-center justify-center w-8 h-8 border border-offBlack dark:border-offWhite rounded">
+        <Link
+          href={`/work/?id=${next.id}` || null}
+          as={`/work/${next.id}`}
+          passHref
+        >
+          <motion.a
+            className="inline-flex items-center justify-center w-8 h-8 border border-offBlack dark:border-offWhite rounded"
+            whileTap={buttonNoTurn.tap}
+            whileHover={buttonNoTurn.hover}
+            initial={buttonNoTurn.initial}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-3 h-3"
@@ -25,7 +36,7 @@ const Pagination = ({ next, prev, counter, current }) => {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </motion.a>
         </Link>
       ) : (
         <span className="w-8"></span>
@@ -38,8 +49,17 @@ const Pagination = ({ next, prev, counter, current }) => {
       </p>
 
       {prev ? (
-        <Link href={`/work/?id=${prev.id}` || null} as={`/work/${prev.id}`}>
-          <a className="inline-flex items-center justify-center w-8 h-8 border border-offBlack dark:border-offWhite rounded">
+        <Link
+          href={`/work/?id=${prev.id}` || null}
+          as={`/work/${prev.id}`}
+          passHref
+        >
+          <motion.a
+            className="inline-flex items-center justify-center w-8 h-8 border border-offBlack dark:border-offWhite rounded"
+            whileTap={buttonNoTurn.tap}
+            whileHover={buttonNoTurn.hover}
+            initial={buttonNoTurn.initial}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-3 h-3"
@@ -52,7 +72,7 @@ const Pagination = ({ next, prev, counter, current }) => {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </motion.a>
         </Link>
       ) : (
         <span className="w-8"></span>

@@ -58,3 +58,15 @@ export const buttonPress = {
     scale: 1,
   },
 };
+
+export const buttonNoTurn = {
+  hover: {
+    scale: 1.05,
+  },
+  tap: {
+    scale: 0.9,
+  },
+  initial: {
+    scale: 1,
+  },
+};

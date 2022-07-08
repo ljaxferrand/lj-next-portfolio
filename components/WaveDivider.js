@@ -9,7 +9,7 @@ const WaveDivider = () => {
         preserveAspectRatio="none"
         className="h-full w-full stroke-0 fill-primaryDarker"
       >
-        <path d="M-3.10,35.05 C241.25,112.02 271.49,-49.98 500.84,24.19 L500.00,0.00 L0.00,0.00 Z"></path>
+        <path d="M0.00,116.95 C149.99,150.00 271.49,-49.98 500.56,105.11 L500.00,0.00 L0.00,0.00 Z"></path>
       </svg>
     </div>
   );

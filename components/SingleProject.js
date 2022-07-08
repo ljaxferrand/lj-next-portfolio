@@ -8,10 +8,6 @@ const SingleProject = ({ workInfo, projectPagination }) => {
         title={workInfo.acf.project_title}
         description={workInfo.acf.excerpt}
       />
-
-      {/* <h2>{workInfo.acf.type}</h2> */}
-
-      {/* Styles for the dangerousHTML are set via "./styles/globals.css" */}
       <div
         id="post-content"
         dangerouslySetInnerHTML={{ __html: workInfo.acf.project_content }}

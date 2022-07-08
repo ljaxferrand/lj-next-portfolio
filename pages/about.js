@@ -1,7 +1,9 @@
+import Cover from "../components/Cover";
+
 const About = () => {
   return (
     <div id="main-content">
-      <h1>About Me</h1>
+      <Cover title={"About"} description={"Tinker Coder Creative Try"} />
     </div>
   );
 };

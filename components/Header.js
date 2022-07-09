@@ -9,7 +9,7 @@ import { buttonPress } from "../utilities/animations";
 
 const Header = () => {
   return (
-    <header className="z-50 sticky top-0 bg-offWhite dark:bg-darkestAccent shadow-md">
+    <header className="lg:container mx-auto">
       <a className="skip-link screen-reader-text" href="#main-content">
         Skip to Content
       </a>
@@ -27,7 +27,7 @@ const Header = () => {
           <p className="font-heading text-2xl">{globalData.acf.site_title}</p>
         </div>
 
-        <nav className="pr-6">
+        <nav className="pr-6 hidden md:contents">
           <ul className="flex">
             {headerMenu.map((item) => (
               <li key={item.id} className="p-4">
@@ -36,7 +36,7 @@ const Header = () => {
                 </Link>
               </li>
             ))}
-            <li className="">
+            <li>
               <ThemeToggle />
             </li>
           </ul>

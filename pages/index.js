@@ -11,16 +11,18 @@ const Home = ({ homeData, allWorks }) => {
         <meta name="description" content={homeData.acf.seo_description}></meta>
       </Head>
 
-      <div id="main-content">
-        <div className="container mx-auto flex items-center justify-around pt-16">
+      <div id="main-content" className="">
+        <div className="">
           <div>
-            <h1 className="text-6xl">{homeData.acf.intro}</h1>
+            <h1 className="text-2xl sm:text-5xl md:text-6xl">
+              {homeData.acf.intro}
+            </h1>
             <p className="pt-4">{homeData.acf.short_about}</p>
           </div>
 
           <img
             id="bio-img-home"
-            className="w-96 shadow-2xl"
+            className="sm:max-w-sm shadow-2xl"
             src={homeData.acf.owner_image.url}
             alt={homeData.acf.owner_image.alt}
           />

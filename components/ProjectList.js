@@ -5,23 +5,23 @@ import Link from "next/link";
 
 const ProjectList = ({ data }) => {
   return (
-    <ul className="container mx-auto">
+    <ul className="md:container md:mx-auto">
       {data.map((project) => (
         <motion.li
           key={project.id}
           initial={fadeIn.initial}
           whileInView={inView}
           viewport={{ once: true }}
-          className="lg:flex justify-center group py-8"
+          className="md:py-8 lg:flex justify-center group"
         >
           <Link href={`/work/?id=${project.id}`} as={`/work/${project.id}`}>
             <a className="flex flex-col items-center lg:items-start lg:flex-row gap-12">
-              <div className="w-96 h-96 shadow-2xl rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-secondaryAccent group-odd:bg-primaryAccent">
+              <div className="w-full s:w-96 s:h-96 shadow-2xl s:rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-secondaryAccent group-odd:bg-primaryAccent">
                 <motion.img
                   initial={quickSlide.initial}
                   whileInView={quickSlide.animate}
                   viewport={{ once: true }}
-                  className="w-96 h-96 object-cover group-even:bg-secondaryAccent group-odd:bg-primaryAccent"
+                  className="w-full s:w-96 s:h-96 object-cover group-even:bg-secondaryAccent group-odd:bg-primaryAccent"
                   src={project.acf.project_featured_img.url}
                   alt={
                     project.acf.project_featured_img.alt ||

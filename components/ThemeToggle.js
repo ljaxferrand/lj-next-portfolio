@@ -23,7 +23,7 @@ const ThemeToggle = () => {
       className="px-4 pb-4 pt-2"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      {theme === "dark" ? (
+      {theme === "dark" && (
         <svg
           className="w-8 h-8 fill-lightGrey drop-shadow-lg "
           fill="none"
@@ -38,7 +38,9 @@ const ThemeToggle = () => {
             d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
           />
         </svg>
-      ) : (
+      )}
+
+      {theme === "light" && (
         <svg
           className="w-8 h-8 fill-yellowBG stroke-offBlack drop-shadow-2xl shadow-offBlack  border-[1px] border-offBlack rounded"
           fill="none"

@@ -21,7 +21,7 @@ const ProjectList = ({ data }) => {
                   initial={quickSlide.initial}
                   whileInView={quickSlide.animate}
                   viewport={{ once: true }}
-                  className="w-full s:w-96 s:h-96 object-cover group-even:bg-secondaryAccent group-odd:bg-primaryAccent"
+                  className="w-full s:w-96 s:h-96 object-cover"
                   src={project.acf.project_featured_img.url}
                   alt={
                     project.acf.project_featured_img.alt ||

@@ -81,23 +81,23 @@
 
   /* Styles for dangerouslySetHTML from individual project pages */
 
-  #post-content {
-    @apply container mx-auto max-w-prose pt-8;
+  .post-content {
+    @apply container mx-auto max-w-prose pb-8;
   }
 
-  #post-content strong {
+  .post-content strong {
     @apply font-bold;
   }
 
-  #post-content blockquote {
+  .post-content blockquote {
     @apply my-4 p-8 border-dotted border-y-4 border-y-lightGrey;
   }
 
-  #post-content ul {
+  .post-content ul {
     @apply list-disc pl-8;
   }
 
-  #post-content a {
+  .post-content a {
     @apply underline underline-offset-2 decoration-wavy decoration-primaryAccent dark:decoration-tertiaryAccent dark:hover:bg-tertiaryAccent/70 hover:bg-tertiaryAccent dark:hover:text-offBlack;
   }
 }

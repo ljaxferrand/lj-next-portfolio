@@ -20,7 +20,7 @@ const ThemeToggle = () => {
       whileHover={buttonPress.hover}
       whileTap={buttonPress.tap}
       initial={buttonPress.initial}
-      className="px-4 pb-4 pt-2"
+      className="p-4"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "dark" && (

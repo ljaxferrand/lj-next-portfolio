@@ -9,12 +9,12 @@ import { buttonPress } from "../utilities/animations";
 
 const Header = () => {
   return (
-    <header className="z-50 sticky top-0 bg-offWhite/50 dark:bg-darkestAccent/50 backdrop-filter backdrop-blur-lg trasition ease-in-out duration-500">
+    <header className="z-50 sticky top-0 bg-offWhite/70 dark:bg-darkestAccent/80 backdrop-filter backdrop-blur-lg trasition ease-in-out duration-500 shadow-sm">
       <a className="skip-link screen-reader-text" href="#main-content">
         Skip to Content
       </a>
       <div className="lg:container mx-auto flex items-center justify-between">
-        <div className="flex pl-2  items-center">
+        <div className="flex pl-2 items-center">
           <Link href="/">
             <motion.a
               whileTap={buttonPress.tap}
@@ -28,7 +28,7 @@ const Header = () => {
         </div>
 
         <nav className="pr-6 hidden md:contents">
-          <ul className="flex">
+          <ul className="flex items-center">
             {headerMenu.map((item) => (
               <li key={item.id} className="p-4">
                 <Link href={item.href}>

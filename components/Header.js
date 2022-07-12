@@ -9,11 +9,11 @@ import { buttonPress } from "../utilities/animations";
 
 const Header = () => {
   return (
-    <header className="lg:container mx-auto">
+    <header className="z-50 sticky top-0 bg-offWhite/50 dark:bg-darkestAccent/50 backdrop-filter backdrop-blur-lg trasition ease-in-out duration-500">
       <a className="skip-link screen-reader-text" href="#main-content">
         Skip to Content
       </a>
-      <div className="flex items-center justify-between">
+      <div className="lg:container mx-auto flex items-center justify-between">
         <div className="flex pl-2  items-center">
           <Link href="/">
             <motion.a

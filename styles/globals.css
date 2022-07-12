@@ -90,7 +90,7 @@
   }
 
   .post-content blockquote {
-    @apply my-4 p-8 border-dotted border-y-4 border-y-lightGrey;
+    @apply my-4 ml-2 p-8 border-l-4 border-lightGrey;
   }
 
   .post-content ul {

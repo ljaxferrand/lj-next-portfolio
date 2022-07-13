@@ -81,6 +81,11 @@
 
   /* Styles for dangerouslySetHTML from individual project pages */
 
+  .scrollspy-is-active {
+    background-color: yellowgreen;
+    border-radius: 15px;
+  }
+
   .post-content {
     @apply container mx-auto max-w-prose pb-8;
   }

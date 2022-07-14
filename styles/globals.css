@@ -13,7 +13,7 @@
 
   body {
     overscroll-behavior: none;
-    @apply text-offBlack bg-offWhite tracking-wider transition-colors dark:transition-colors dark:text-offWhite dark:bg-[#121212];
+    @apply text-offBlack bg-offWhite tracking-wider transition-colors dark:transition-colors dark:text-offWhite dark:bg-[#1c1c1c];
   }
 
   h1 {

@@ -7,6 +7,13 @@ const ScrollSpyNav = dynamic(() => import("react-scrollspy-nav"), {
 });
 
 const SingleProject = ({ workInfo, projectPagination }) => {
+  // ScrollSpy ID array for required sections
+  const sectionIDs = ["section_1", "section_2", "section_3", "section_4"];
+
+  // Add the optional section fields to the ScrollSpy array if they exsist
+  workInfo.acf.project_content_5 && sectionIDs.push("section_5");
+  workInfo.acf.project_content_6 && sectionIDs.push("section_6");
+
   return (
     <div id="main-content">
       <Cover
@@ -18,14 +25,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
       <div className="container mx-auto relative">
         <div className="sticky top-24 left-0 pl-8 max-w-content">
           <ScrollSpyNav
-            scrollTargetIds={[
-              "section_1",
-              "section_2",
-              "section_3",
-              "section_4",
-              "section_5",
-              "section_6",
-            ]}
+            scrollTargetIds={sectionIDs}
             offset={-100}
             scrollDuration="500"
             activeNavClass="scrollspy-is-active"

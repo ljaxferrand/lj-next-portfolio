@@ -20,10 +20,9 @@ const SingleProject = ({ workInfo, projectPagination }) => {
         title={workInfo.acf.project_title}
         description={workInfo.acf.excerpt}
       />
-      {/* Required Project Sections */}
 
-      <div className="container mx-auto relative lg:grid grid-cols-5 gap-2">
-        <div className="hidden lg:sticky top-0 left-6 lg:inline col-start pt-2">
+      <div className="relative container mx-auto">
+        <div className="hidden lg:block lg:sticky top-24 left-0 pl-10  pt-2">
           <ScrollSpyNav
             scrollTargetIds={sectionIDs}
             offset={-100}
@@ -58,7 +57,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
           </ScrollSpyNav>
         </div>
 
-        <div className="col-span-3">
+        <div className="container mx-auto">
           <section id="section_1">
             <h2 className="text-center">{workInfo.acf.content_heading_1}</h2>
             <div
@@ -122,15 +121,16 @@ const SingleProject = ({ workInfo, projectPagination }) => {
               ></div>
             </section>
           )}
+
+          <Pagination
+            className="col-span-3"
+            current={workInfo.id}
+            prev={workInfo.previous}
+            next={workInfo.next}
+            counter={projectPagination}
+          />
         </div>
       </div>
-
-      <Pagination
-        current={workInfo.id}
-        prev={workInfo.previous}
-        next={workInfo.next}
-        counter={projectPagination}
-      />
     </div>
   );
 };

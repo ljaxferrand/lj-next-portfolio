@@ -11,25 +11,27 @@ const Home = ({ homeData, allWorks }) => {
         <meta name="description" content={homeData.acf.seo_description}></meta>
       </Head>
 
-      <div id="main-content" className="">
-        <div className="">
-          <div>
-            <h1 className="text-2xl sm:text-5xl md:text-6xl">
+      <div id="main-content">
+        <div className="container mx-auto p-4 lg:pt-12 flex flex-col lg:flex-row">
+          <div className="mx-auto pb-4 max-w-xl">
+            <h1 className="text-3xl s:text-5xl md:text-6xl">
               {homeData.acf.intro}
             </h1>
-            <p className="pt-4">{homeData.acf.short_about}</p>
+            <p>{homeData.acf.short_about}</p>
           </div>
 
           <img
             id="bio-img-home"
-            className="sm:max-w-sm shadow-2xl"
+            className="mx-auto s:max-w-sm shadow-2xl"
             src={homeData.acf.owner_image.url}
             alt={homeData.acf.owner_image.alt}
           />
         </div>
 
-        <section id="work" className="pt-8">
-          <h2 className="text-center text-4xl">Work</h2>
+        <section id="work">
+          <h2 className="text-center text-3xl s:text-4xl md:text-5xl py-12 px-4">
+            Recent Work
+          </h2>
           <ProjectList data={allWorks} />
         </section>
       </div>

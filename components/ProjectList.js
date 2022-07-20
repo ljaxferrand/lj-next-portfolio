@@ -12,7 +12,7 @@ const ProjectList = ({ data }) => {
           initial={fadeIn.initial}
           whileInView={inView}
           viewport={{ once: true }}
-          className="md:py-8 lg:flex justify-center group"
+          className="pt-24 py-8 lg:flex justify-center group"
         >
           <div className="flex flex-col items-center lg:items-start lg:flex-row gap-12">
             <div className="w-full s:w-96 s:h-96 shadow-2xl s:rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-secondaryAccent group-odd:bg-primaryAccent">
@@ -29,7 +29,7 @@ const ProjectList = ({ data }) => {
               />
             </div>
 
-            <div className="relative max-w-md lg:py-8 lg:mt-8 ">
+            <div className="relative max-w-md px-4 lg:py-8 lg:mt-8 ">
               <h2>{project.acf.project_title}</h2>
               <h3 className="absolute -top-4 lg:top-4 left-6">
                 {project.acf.type}

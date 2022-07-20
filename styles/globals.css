@@ -81,6 +81,10 @@
 
   /* Styles for dangerouslySetHTML from individual project pages */
 
+  #scrollspy li {
+    @apply pb-2;
+  }
+
   .scrollspy-is-active {
     background-color: yellowgreen;
     border-radius: 15px;

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+// Work in progress for loading screen
 
 const Load = () => {
   const container = {

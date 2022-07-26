@@ -1,6 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
-import { fadeIn, inView, quickSlide } from "../utilities/animations";
+import {
+  fadeIn,
+  inView,
+  quickSlide,
+  buttonNoTurn,
+} from "../utilities/animations";
 import Link from "next/link";
 
 const ProjectList = ({ data }) => {
@@ -36,15 +41,22 @@ const ProjectList = ({ data }) => {
               </h3>
               <p>{project.acf.excerpt}</p>
 
-              <Link
-                href={`/work/?id=${project.id}`}
-                as={`/work/${project.id}`}
-                passHref={true}
+              <motion.div
+                className="pt-2 flex justify-center lg:justify-start"
+                variants={buttonNoTurn}
+                whileHover={buttonNoTurn.hover}
+                whileTap={buttonNoTurn.tap}
               >
-                <a className="font-bold bg-primaryAccent py-2 px-4 rounded-full text-offWhite shadow-lg">
-                  View Project
-                </a>
-              </Link>
+                <Link
+                  href={`/work/?id=${project.id}`}
+                  as={`/work/${project.id}`}
+                  passHref={true}
+                >
+                  <a className="cursor-pointer font-bold bg-primaryAccent py-2 px-4 rounded-full text-offWhite shadow-lg">
+                    View Project
+                  </a>
+                </Link>
+              </motion.div>
             </div>
           </div>
         </motion.li>

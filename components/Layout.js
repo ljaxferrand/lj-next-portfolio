@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <>
       <Header />
       <main>{children}</main>
-      <Footer />
+      <Footer text={"Want to work together?"} btnText={"Let's Connect!"} />
     </>
   );
 }

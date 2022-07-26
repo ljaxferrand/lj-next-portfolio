@@ -2,11 +2,7 @@ import axios from "axios";
 import SingleProject from "../../components/SingleProject";
 
 const WorkPage = ({ workInfo, posts }) => {
-  return (
-    <div id="main-content">
-      <SingleProject workInfo={workInfo} projectPagination={posts} />
-    </div>
-  );
+  return <SingleProject workInfo={workInfo} projectPagination={posts} />;
 };
 
 export default WorkPage;

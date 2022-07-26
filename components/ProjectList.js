@@ -42,7 +42,7 @@ const ProjectList = ({ data }) => {
               <p>{project.acf.excerpt}</p>
 
               <motion.div
-                className="pt-2 flex justify-center lg:justify-start"
+                className="max-w-fit pt-2 flex justify-center lg:justify-start"
                 variants={buttonNoTurn}
                 whileHover={buttonNoTurn.hover}
                 whileTap={buttonNoTurn.tap}

@@ -46,11 +46,11 @@ export const successBounce = {
 
 export const buttonPress = {
   hover: {
-    scale: 1.1,
+    scale: 1.2,
     rotate: 5,
   },
   tap: {
-    scale: 0.9,
+    scale: 0.85,
   },
   initial: {
     scale: 1,

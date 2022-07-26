@@ -15,7 +15,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
   workInfo.acf.project_content_6 && sectionIDs.push("section_6");
 
   return (
-    <div id="main-content">
+    <article id="main-content">
       <Cover
         title={workInfo.acf.project_title}
         description={workInfo.acf.excerpt}
@@ -131,7 +131,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
           />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

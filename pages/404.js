@@ -1,9 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 import Cover from "../components/Cover";
 
 const Custom404 = () => {
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Error 404 | Page not Found</title>
+      </Head>
       <div id="main-content">
         <Cover title={"Error: 404"} description={"Page not Found!"} />
         <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center px-4">

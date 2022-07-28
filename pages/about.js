@@ -1,21 +1,28 @@
+import Head from "next/head";
 import axios from "axios";
 import Cover from "../components/Cover";
 
 const About = ({ aboutData }) => {
   return (
-    <div id="main-content">
-      <Cover
-        title={aboutData.acf.title}
-        description={"Tinker Coder Creative Try"}
-      />
+    <>
+      <Head>
+        <title>{aboutData.acf.seo_title}</title>
+        <meta name="description" content={aboutData.acf.seo_description}></meta>
+      </Head>
+      <div id="main-content">
+        <Cover
+          title={aboutData.acf.title}
+          description={aboutData.acf.about_description}
+        />
 
-      <div
-        className="post-content"
-        dangerouslySetInnerHTML={{
-          __html: aboutData.acf.bio_text,
-        }}
-      ></div>
-    </div>
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{
+            __html: aboutData.acf.bio_text,
+          }}
+        ></div>
+      </div>
+    </>
   );
 };
 export default About;

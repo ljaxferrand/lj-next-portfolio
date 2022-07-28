@@ -7,7 +7,7 @@ const Footer = ({ text, btnText }) => {
   const today = new Date();
 
   return (
-    <footer className="bg-darkestAccent">
+    <footer className="bg-darkestAccent pb-14 sm:pb-0">
       <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex flex-col items-center gap-4 p-6 bg-tertiaryAccent rounded-lg shadow-lg sm:flex-row sm:justify-between">

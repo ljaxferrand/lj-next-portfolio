@@ -9,7 +9,7 @@ import { buttonPress } from "../utilities/animations";
 
 const Header = () => {
   return (
-    <header className="z-50 fixed bottom-0 w-full sm:sticky sm:top-0 bg-pink-600 sm:bg-offWhite/70 sm:dark:bg-darkestAccent/80 sm:backdrop-filter sm:backdrop-blur-lg sm:trasition sm:ease-in-out sm:duration-500 shadow-sm">
+    <header className="z-50 fixed bottom-0 w-full sm:sticky sm:top-0 bg-primaryAccent sm:bg-offWhite/70 sm:dark:bg-darkestAccent/80 sm:backdrop-filter sm:backdrop-blur-lg sm:trasition sm:ease-in-out sm:duration-500 shadow-sm">
       <a className="skip-link screen-reader-text" href="#main-content">
         Skip to Content
       </a>
@@ -29,15 +29,17 @@ const Header = () => {
           </p>
         </div>
 
-        <nav className="sm:pr-6">
-          <ul className="flex flex-nowrap items-center justify-around">
+        <nav className="w-full sm:w-auto sm:pr-6">
+          <ul className="flex flex-nowrap items-center justify-evenly">
             {headerMenu.map((item) => (
               <li
                 key={item.id}
-                className="w-32 border-2 border-offWhite p-4 sm:border-none"
+                className="inline-flex justify-center sm:block w-1/3 border-2 border-offBlack dark:border-offWhite border-y-4 sm:border-none"
               >
                 <Link href={item.href}>
-                  <a className="uppercase p-4">{item.name}</a>
+                  <a className="font-bold sm:font-normal text-offWhite sm:text-offBlack sm:dark:text-offWhite uppercase p-4">
+                    {item.name}
+                  </a>
                 </Link>
               </li>
             ))}

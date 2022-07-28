@@ -1,17 +1,22 @@
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { buttonPress } from "../utilities/animations";
+
 const Logo = () => {
   return (
-    <>
-      <svg
-        className="w-16 h-16 m-4 stroke-offBlack dark:stroke-offWhite"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 646 521"
+    <Link href="/">
+      <motion.a
+        whileTap={buttonPress.tap}
+        whileHover={buttonPress.hover}
+        initial={buttonPress.initial}
       >
-        <filter id="shadow" colorInterpolationFilters="sRGB">
-          <feDropShadow dx="4" dy="6" stdDeviation="3" floodOpacity="0.5" />
-        </filter>
-        <g filter="url(#shadow)">
+        <svg
+          className="w-16 h-16 m-4 stroke-offBlack dark:stroke-offWhite"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 646 521"
+        >
           <path
-            strokeWidth={12}
+            strokeWidth={16}
             strokeLinecap="round"
             d="M 301 452 L 266 392,
           M 301 452 L 265 515,
@@ -38,9 +43,9 @@ const Logo = () => {
           M 398 361 L 361 361,
           M 361 361 L 323 428"
           />
-        </g>
-      </svg>
-    </>
+        </svg>
+      </motion.a>
+    </Link>
   );
 };
 

@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import globalData from "../utilities/globalData.preval";
 import MobileTop from "./MobileTop";
 import Link from "next/link";
 import { headerMenu } from "./menuItems";
 import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
 
-const Header = () => {
+const Header = ({ data }) => {
   return (
     <>
       <header className="z-50 fixed bottom-0 w-full sm:sticky sm:top-0 bg-primaryAccent sm:bg-offWhite/70 sm:dark:bg-darkestAccent/80 sm:backdrop-filter sm:backdrop-blur-lg sm:trasition sm:ease-in-out sm:duration-500 shadow-sm">
@@ -17,7 +16,7 @@ const Header = () => {
           <div className="hidden sm:flex pl-2 items-center">
             <Logo />
             <p className="hidden md:block font-heading text-2xl">
-              {globalData.acf.site_title}
+              {data.acf.site_title}
             </p>
           </div>
 
@@ -42,7 +41,7 @@ const Header = () => {
           </nav>
         </div>
       </header>
-      <MobileTop name={globalData.acf.site_title} />
+      <MobileTop name={data.acf.site_title} />
     </>
   );
 };

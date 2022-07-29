@@ -5,18 +5,18 @@ import Github from "../components/socials/Github";
 import LinkedIn from "../components/socials/LinkedIn";
 import Email from "../components/socials/Email";
 
-const Footer = ({ text, btnText }) => {
+const Footer = ({ data }) => {
   // Dates for Copyright
   const firstYear = new Date("Nov 20, 21 00:20:18");
   const today = new Date();
 
   return (
-    <footer className="bg-darkestAccent pb-14 sm:pb-0">
-      <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <div className="flex flex-col items-center gap-4 p-6 bg-tertiaryAccent rounded-lg shadow-lg sm:flex-row sm:justify-between">
+    <footer className="bg-darkestAccent pb-12 sm:pb-0">
+      <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div className="sm:flex sm:items-center sm:justify-between gap-x-8">
+          <div className="flex flex-col items-center gap-4 p-6 mb-4 sm:mb-0 sm:ml-4 bg-tertiaryAccent rounded-lg shadow-lg sm:flex-row sm:justify-between">
             <strong className="text-xl text-primaryDarker sm:text-xl">
-              {text}
+              {data.acf.footer_cta}
             </strong>
 
             <motion.div
@@ -26,7 +26,9 @@ const Footer = ({ text, btnText }) => {
             >
               <Link href="/contact" passHref={true}>
                 <a className="inline-flex items-center px-8 py-3 text-primaryDarker bg-white border border-white rounded-full hover:bg-transparent  active:bg-white/90 focus:outline-none focus:ring">
-                  <span className="text-sm font-medium">{btnText}</span>
+                  <span className="text-sm font-medium">
+                    {data.acf.footer_cta_btn}
+                  </span>
 
                   <svg
                     className="w-5 h-5 ml-3"
@@ -47,13 +49,34 @@ const Footer = ({ text, btnText }) => {
             </motion.div>
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <div className="flex flex-nowrap justify-evenly">
-              <Email />
-              <Github />
-              <LinkedIn />
+              <a
+                className="p-4"
+                href={`mailto:${data.acf.email}?subject=Reaching%20out%20via%20your%20website%20re%3A&body=Hey%20LJ%2C%20%0A%0AI%27d%20love%20to%20chat%20about%20...`}
+              >
+                <Email />
+              </a>
+              <a
+                className="p-4"
+                href={data.acf.social_link_2}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile – link opens in a new tab."
+              >
+                <Github />
+              </a>
+              <a
+                className="p-4"
+                href={data.acf.social_link_1}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile – link opens in a new tab."
+              >
+                <LinkedIn />
+              </a>
             </div>
-            <p className="ml-4 mt-8 sm:mt-0 text-sm text-center text-gray-400 lg:text-right">
+            <p className="mx-4 sm:mt-0 text-sm text-center text-gray-400 lg:text-right">
               Copyright &copy; {firstYear.getFullYear()} - {today.getFullYear()}
             </p>
           </div>

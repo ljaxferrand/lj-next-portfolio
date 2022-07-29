@@ -1,3 +1,4 @@
+import globalData from "../utilities/globalData.preval";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -33,9 +34,9 @@ export default function Layout({ children }) {
         <meta name="msapplication-TileColor" content="#00aba9" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Header />
+      <Header data={globalData} />
       <main>{children}</main>
-      <Footer text={"Want to work together?"} btnText={"Let's Connect!"} />
+      <Footer data={globalData} />
     </>
   );
 }

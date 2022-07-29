@@ -2,8 +2,13 @@
 import axios from "axios";
 import Head from "next/head";
 import ProjectList from "../components/ProjectList";
+import { eggie, style, message } from "../utilities/easterEgg";
 
 const Home = ({ homeData, allWorks }) => {
+  // Console easter egg
+  console.log(eggie);
+  console.log(message, style);
+
   return (
     <>
       <Head>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { buttonNoTurn } from "../utilities/animations";
 
 const Footer = ({ text, btnText }) => {
+  // Dates for Copyright
   const firstYear = new Date("Nov 20, 21 00:20:18");
   const today = new Date();
 

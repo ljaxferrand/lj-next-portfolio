@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { buttonNoTurn } from "../utilities/animations";
+import { eggie, style, message } from "../utilities/easterEgg";
 
 const Footer = ({ text, btnText }) => {
+  // Console easter egg
+  console.log(eggie);
+  console.log(message, style);
+
+  // Dates for Copyright
   const firstYear = new Date("Nov 20, 21 00:20:18");
   const today = new Date();
 

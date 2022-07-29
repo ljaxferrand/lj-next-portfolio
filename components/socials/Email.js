@@ -1,7 +1,7 @@
 const Email = () => {
   return (
     <svg
-      className="w-14 h-14"
+      className="w-14 h-14 fill-offWhite"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { buttonNoTurn } from "../utilities/animations";
+import { buttonNoTurn, buttonPress } from "../utilities/animations";
 import Github from "../components/socials/Github";
 import LinkedIn from "../components/socials/LinkedIn";
 import Email from "../components/socials/Email";
@@ -51,30 +51,39 @@ const Footer = ({ data }) => {
 
           <div className="flex flex-col">
             <div className="flex flex-nowrap justify-evenly">
-              <a
+              <motion.a
                 className="p-4"
+                whileTap={buttonPress.tap}
+                whileHover={buttonPress.hover}
+                initial={buttonPress.initial}
                 href={`mailto:${data.acf.email}?subject=Reaching%20out%20via%20your%20website%20re%3A&body=Hey%20LJ%2C%20%0A%0AI%27d%20love%20to%20chat%20about%20...`}
               >
                 <Email />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 className="p-4"
+                whileTap={buttonPress.tap}
+                whileHover={buttonPress.hover}
+                initial={buttonPress.initial}
                 href={data.acf.social_link_2}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile – link opens in a new tab."
               >
                 <Github />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 className="p-4"
+                whileTap={buttonPress.tap}
+                whileHover={buttonPress.hover}
+                initial={buttonPress.initial}
                 href={data.acf.social_link_1}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile – link opens in a new tab."
               >
                 <LinkedIn />
-              </a>
+              </motion.a>
             </div>
             <p className="mx-4 sm:mt-0 text-sm text-center text-gray-400 lg:text-right">
               Copyright &copy; {firstYear.getFullYear()} - {today.getFullYear()}

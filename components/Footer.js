@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { buttonNoTurn } from "../utilities/animations";
+import { eggie, style, message } from "../utilities/easterEgg";
 
 const Footer = ({ text, btnText }) => {
   // Dates for Copyright

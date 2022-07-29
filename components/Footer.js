@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { buttonNoTurn } from "../utilities/animations";
-import { eggie, style, message } from "../utilities/easterEgg";
+import Github from "../components/socials/Github";
+import LinkedIn from "../components/socials/LinkedIn";
+import Email from "../components/socials/Email";
 
 const Footer = ({ text, btnText }) => {
   // Dates for Copyright
@@ -45,9 +47,16 @@ const Footer = ({ text, btnText }) => {
             </motion.div>
           </div>
 
-          <p className="ml-4 mt-8 sm:mt-0 text-sm text-center text-gray-400 lg:text-right">
-            Copyright &copy; {firstYear.getFullYear()} - {today.getFullYear()}
-          </p>
+          <div>
+            <div className="flex flex-nowrap justify-evenly">
+              <Email />
+              <Github />
+              <LinkedIn />
+            </div>
+            <p className="ml-4 mt-8 sm:mt-0 text-sm text-center text-gray-400 lg:text-right">
+              Copyright &copy; {firstYear.getFullYear()} - {today.getFullYear()}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

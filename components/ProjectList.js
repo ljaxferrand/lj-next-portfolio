@@ -20,7 +20,7 @@ const ProjectList = ({ data }) => {
           className="pt-24 py-8 lg:flex justify-center group"
         >
           <div className="flex flex-col items-center lg:items-start lg:flex-row gap-12">
-            <div className="w-full s:w-96 s:h-96 shadow-2xl s:rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-secondaryAccent group-odd:bg-primaryAccent">
+            <div className="w-full s:w-96 s:h-96 shadow-2xl dark:shadow-none s:rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-secondaryAccent group-odd:bg-primaryAccent">
               <motion.img
                 initial={quickSlide.initial}
                 whileInView={quickSlide.animate}

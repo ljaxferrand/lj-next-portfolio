@@ -99,7 +99,18 @@
   }
 
   .post-content blockquote {
-    @apply my-4 ml-2 p-8 border-l-4 border-lightGrey;
+    @apply my-4 ml-2 p-8 border-l-4;
+    border-image: linear-gradient(
+        rgb(94 234 212) 0%,
+        rgb(96 165 250) 50%,
+        rgb(192 132 252) 100%
+      )
+      1;
+    /* @apply from-teal-300 via-blue-400 to-purple-400; */
+  }
+
+  .post-content blockquote p {
+    @apply leading-tight text-2xl;
   }
 
   .post-content ul {

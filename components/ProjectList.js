@@ -26,6 +26,8 @@ const ProjectList = ({ data }) => {
                 whileInView={quickSlide.animate}
                 viewport={{ once: true }}
                 className="w-full s:w-96 s:h-96 object-cover"
+                sizes="(min-width: 500px) 384px, 100vw"
+                srcSet={`${project.acf.project_featured_img.url}&w=320 320w, ${project.acf.project_featured_img.url}&w=384 384w`}
                 src={project.acf.project_featured_img.url}
                 alt={
                   project.acf.project_featured_img.alt ||

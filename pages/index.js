@@ -28,8 +28,12 @@ const Home = ({ homeData, allWorks }) => {
           <img
             id="bio-img-home"
             className="mx-auto s:max-w-sm shadow-2xl"
+            sizes="(min-width: 640px) 384px, (min-width: 500px) 320px, (min-width: 460px) 288px, calc(14.29vw + 225px)"
+            srcSet={`${homeData.acf.owner_image.url}&w=320 320w, ${homeData.acf.owner_image.url}&w=460 460w, ${homeData.acf.owner_image.url}&w=600 600w`}
             src={homeData.acf.owner_image.url}
-            alt={homeData.acf.owner_image.alt}
+            alt={
+              homeData.acf.owner_image.alt || homeData.acf.owner_image.filename
+            }
           />
         </div>
 

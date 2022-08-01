@@ -39,7 +39,7 @@ const Home = ({ homeData, allWorks }) => {
 
         <section id="work">
           <h2 className="text-center text-3xl s:text-4xl md:text-5xl py-12 px-4">
-            Recent Work
+            {homeData.acf.work_section_title}
           </h2>
           <ProjectList data={allWorks} />
         </section>

@@ -28,7 +28,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
         />
 
         <div className="relative container mx-auto lg:grid grid-cols-12">
-          <div className="hidden lg:inline lg:sticky top-24 left-0 pl-10 pt-2 w-52 h-fit col-start-1 col-end-3">
+          <div className="hidden lg:inline lg:sticky top-24 left-0 pl-10 pt-4 w-52 h-fit col-start-1 col-end-3">
             <ScrollSpyNav
               scrollTargetIds={sectionIDs}
               offset={175}

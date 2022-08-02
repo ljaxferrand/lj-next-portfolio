@@ -4,6 +4,8 @@ import Link from "next/link";
 import { headerMenu } from "./menuItems";
 import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
+import { motion } from "framer-motion";
+import { buttonNoTurn, buttonPress } from "../utilities/animations";
 
 const Header = ({ data }) => {
   return (
@@ -23,16 +25,19 @@ const Header = ({ data }) => {
           <nav className="w-full sm:w-auto sm:pr-6">
             <ul className="flex flex-nowrap items-center justify-evenly">
               {headerMenu.map((item) => (
-                <li
+                <motion.li
                   key={item.id}
                   className="inline-flex justify-center sm:block w-1/3 border-2 border-offBlack dark:border-offWhite border-y-4 sm:border-none"
+                  whileHover={buttonNoTurn.hover}
+                  whileTap={buttonNoTurn.tap}
+                  initial={buttonNoTurn.initial}
                 >
-                  <Link href={item.href}>
-                    <a className="font-bold sm:font-normal text-offWhite sm:text-offBlack sm:dark:text-offWhite uppercase p-4">
+                  <Link href={item.href} passHref>
+                    <a className="font-bold sm:font-normal text-offWhite sm:text-offBlack sm:dark:text-offWhite uppercase p-4 hover:underline decoration-primaryAccent dark:decoration-tertiaryAccent decoration-2	underline-offset-2 decoration-wavy">
                       {item.name}
                     </a>
                   </Link>
-                </li>
+                </motion.li>
               ))}
               <li className="hidden sm:contents">
                 <ThemeToggle />

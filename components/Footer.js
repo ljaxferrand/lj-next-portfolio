@@ -11,7 +11,7 @@ const Footer = ({ data }) => {
   const today = new Date();
 
   return (
-    <footer className="bg-darkestAccent pb-12 sm:pb-0">
+    <footer className="bg-darkestAccent mt-12 pb-12 sm:pb-0">
       <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between gap-x-8">
           <div className="flex flex-col items-center gap-4 p-6 mb-4 sm:mb-0 sm:ml-4 bg-tertiaryAccent rounded-lg shadow-lg sm:flex-row sm:justify-between">

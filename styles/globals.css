@@ -116,7 +116,8 @@
     @apply list-disc pl-8;
   }
 
-  .post-content a {
+  .post-content a,
+  .info-block a {
     @apply underline underline-offset-2 decoration-wavy decoration-primaryAccent dark:decoration-tertiaryAccent dark:hover:bg-tertiaryAccent/70 hover:bg-tertiaryAccent dark:hover:text-offBlack;
   }
 }

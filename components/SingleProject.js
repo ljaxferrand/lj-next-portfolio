@@ -2,6 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import Cover from "./Cover";
 import Pagination from "./Pagination";
+import InfoCard from "./InfoCard";
 
 const ScrollSpyNav = dynamic(() => import("react-scrollspy-nav"), {
   ssr: false,
@@ -25,6 +26,13 @@ const SingleProject = ({ workInfo, projectPagination }) => {
         <Cover
           title={workInfo.acf.project_title}
           description={workInfo.acf.excerpt}
+        />
+
+        <InfoCard
+          type={workInfo.acf.type}
+          tools={workInfo.acf.tools}
+          liveLink={workInfo.acf.live_site_link}
+          gitLink={workInfo.acf.github_link}
         />
 
         <div className="relative container mx-auto lg:grid grid-cols-12">

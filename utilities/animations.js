@@ -1,34 +1,26 @@
 export const fadeIn = {
   initial: {
-    y: -25,
+    y: -100,
     opacity: 0,
   },
   animate: {
     y: 0,
-    opacity: 1,
-    transition: { duration: 0.3 },
+    opacity: [0, 0.25, 0.4, 1],
+    transition: { type: "tween", ease: "easeIn", delay: 0.6, duration: 0.8 },
   },
 };
 
-export const quickSlide = {
-  initial: {
-    x: 250,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: { delay: 0.35, duration: 0.4 },
-  },
-};
-
-export const inView = {
-  opacity: 1,
-  x: 0,
-  transition: {
-    duration: 0.8,
-  },
-};
+// export const quickSlide = {
+//   initial: {
+//     x: 250,
+//     opacity: 0,
+//   },
+//   animate: {
+//     x: 0,
+//     opacity: 1,
+//     transition: { delay: 0.35, duration: 0.4 },
+//   },
+// };
 
 export const errorShake = {
   animate: {

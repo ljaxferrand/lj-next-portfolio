@@ -1,11 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
-import {
-  fadeIn,
-  inView,
-  quickSlide,
-  buttonNoTurn,
-} from "../utilities/animations";
+import { fadeIn, buttonNoTurn } from "../utilities/animations";
 import Link from "next/link";
 
 const ProjectList = ({ data }) => {
@@ -15,16 +10,16 @@ const ProjectList = ({ data }) => {
         <motion.li
           key={project.id}
           initial={fadeIn.initial}
-          whileInView={inView}
+          whileInView={fadeIn.animate}
           viewport={{ once: true }}
           className="pt-24 py-8 lg:flex justify-center group"
         >
           <div className="flex flex-col items-center lg:items-start lg:flex-row gap-12">
             <div className="w-full s:w-96 s:h-96 shadow-2xl dark:shadow-none s:rounded-md overflow-hidden lg:group-odd:order-2 group-even:bg-secondaryAccent group-odd:bg-primaryAccent">
               <motion.img
-                initial={quickSlide.initial}
-                whileInView={quickSlide.animate}
-                viewport={{ once: true }}
+                // initial={quickSlide.initial}
+                // whileInView={quickSlide.animate}
+                // viewport={{ once: true }}
                 className="w-full s:w-96 s:h-96 object-cover"
                 alt={
                   project.acf.project_featured_img.alt ||

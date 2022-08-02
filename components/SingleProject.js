@@ -39,7 +39,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
           <div className="hidden lg:inline lg:sticky top-24 left-0 pl-10 pt-4 w-52 h-fit col-start-1 col-end-3">
             <ScrollSpyNav
               scrollTargetIds={sectionIDs}
-              offset={175}
+              offset={858}
               scrollDuration="200"
               activeNavClass="scrollspy-is-active"
               headerBackground="true"

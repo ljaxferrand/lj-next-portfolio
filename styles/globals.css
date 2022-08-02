@@ -85,9 +85,9 @@
     @apply pb-2;
   }
 
-  .scrollspy-is-active {
+  /* .scrollspy-is-active {
     @apply font-bold;
-  }
+  } */
 
   .post-content {
     @apply container mx-auto max-w-prose pb-8 px-6;

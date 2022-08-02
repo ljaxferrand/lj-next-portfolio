@@ -27,13 +27,14 @@ const SingleProject = ({ workInfo, projectPagination }) => {
           description={workInfo.acf.excerpt}
         />
 
-        <div className="relative container mx-auto">
-          <div className="hidden lg:block lg:sticky top-24 left-0 pl-10  pt-2">
+        <div className="relative container mx-auto lg:grid grid-cols-12">
+          <div className="hidden lg:inline lg:sticky top-24 left-0 pl-10 pt-2 w-52 h-fit col-start-1 col-end-3">
             <ScrollSpyNav
               scrollTargetIds={sectionIDs}
-              offset={-100}
-              scrollDuration="500"
+              offset={175}
+              scrollDuration="200"
               activeNavClass="scrollspy-is-active"
+              headerBackground="true"
             >
               <p>Table of Contents</p>
               <ul id="scrollspy">
@@ -63,7 +64,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
             </ScrollSpyNav>
           </div>
 
-          <div className="container mx-auto">
+          <div className="container mx-auto col-start-3 col-end-11">
             <section id="section_1">
               <h2 className="text-center">{workInfo.acf.content_heading_1}</h2>
               <div

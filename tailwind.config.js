@@ -24,7 +24,7 @@ module.exports = {
         tertiaryAccent: "#BBDBCC",
         darkestAccent: "#111827",
         offBlack: "#0b0b0d",
-        offWhite: "#dedcdc",
+        offWhite: "#e5e5e5",
         lightGrey: "#848FA5",
         yellowBG: "#E7BB41",
       },

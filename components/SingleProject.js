@@ -14,6 +14,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
   const sectionIDs = ["section_1", "section_2", "section_3", "section_4"];
 
   // Add the optional section fields to the ScrollSpy array if they exsist
+  // TODO: Refactor with ACF Repeater field, then map through array for the sections.
   workInfo.acf.project_content_5 && sectionIDs.push("section_5");
   workInfo.acf.project_content_6 && sectionIDs.push("section_6");
 
@@ -37,7 +38,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
         />
 
         <div className="relative container mx-auto lg:grid grid-cols-12">
-          <div className="hidden lg:inline lg:sticky top-24 left-0 pl-10 pt-4 w-52 h-fit col-start-1 col-end-3">
+          <div className="hidden xl:inline xl:sticky top-24 left-0 pl-4 pt-4 w-52 h-fit col-start-1 col-end-3">
             <ScrollSpyNav
               scrollTargetIds={sectionIDs}
               offset={858}
@@ -88,7 +89,7 @@ const SingleProject = ({ workInfo, projectPagination }) => {
                 <img
                   className="mx-auto w-full shadow-2xl rounded-md mb-8"
                   sizes="(min-width: 1280px) 853px, (min-width: 1040px) 683px, (min-width: 780px) 768px, (min-width: 640px) 640px, (min-width: 500px) 485px, (min-width: 400px) 320px, calc(25vw + 225px)"
-                  srcSet={`${workInfo.acf.section1_image.url}&w=320 320w, ${workInfo.acf.section1_image.url}&w=460 460w, ${workInfo.acf.section1_image.url}&w=683 683w, ${workInfo.acf.section1_image.url}&w=853 853w, ${workInfo.acf.section1_image.url}&w=1600 1600w`}
+                  srcSet={`${workInfo.acf.section1_image.url}&w=320 320w, ${workInfo.acf.section1_image.url}&w=460 460w, ${workInfo.acf.section1_image.url}&w=683 683w, ${workInfo.acf.section1_image.url}&w=853 853w, ${workInfo.acf.section1_image.url}&w=1200 1200w`}
                   src={workInfo.acf.section1_image.url}
                   alt={
                     workInfo.acf.section1_image.alt ||

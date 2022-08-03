@@ -131,7 +131,7 @@ export default function Form({ handler, isLoading, isSent, hasError }) {
           className="flex self-end"
         >
           <input
-            className="cursor-pointer w-16 drop-shadow-2xl py-2 px-3 rounded text-white bg-lightGrey"
+            className="cursor-pointer w-16 drop-shadow-2xl py-2 px-3 rounded text-offWhite bg-primaryAccent"
             type="submit"
             value="Send"
           />

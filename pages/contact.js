@@ -4,7 +4,7 @@ import Cover from "../components/Cover";
 import Cf7FormWrapper from "../components/form/Cf7FormWrapper";
 import Form from "../components/form/Form";
 
-const Contact = ({ contactData }) => {
+const Contact = ({ contactData, url }) => {
   return (
     <>
       <Head>
@@ -20,7 +20,8 @@ const Contact = ({ contactData }) => {
           description={contactData.acf.contact_text}
         />
 
-        <Cf7FormWrapper siteUrl="https://staging6.ljferrand.com" formId="339">
+        {/* Form ID from WordPress backend, contact form plugin */}
+        <Cf7FormWrapper siteUrl={url} formId="339">
           <Form />
         </Cf7FormWrapper>
       </div>
@@ -33,7 +34,9 @@ export async function getStaticProps() {
   // Get home page data, page ID from WordPress backend
   const contactData = await getPageData(373);
 
+  const url = process.env.CMS_URL;
+
   return {
-    props: { contactData },
+    props: { contactData, url },
   };
 }

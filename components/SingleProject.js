@@ -15,6 +15,8 @@ const SingleProject = ({ workInfo, projectPagination }) => {
 
   // Add the optional section fields to the ScrollSpy array if they exsist
   // TODO: Refactor with ACF Repeater field, then map through array for the sections.
+  // ACF Repeater is pro feature, do this refactor on upgrade.
+  // TODO: Work around: make each section a component
   workInfo.acf.project_content_5 && sectionIDs.push("section_5");
   workInfo.acf.project_content_6 && sectionIDs.push("section_6");
 

@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import axios from "axios";
+import { getPageData, getPostTypeData } from "../utilities/dataFetch";
 import Head from "next/head";
 import ProjectList from "../components/ProjectList";
 import { eggie, style, message } from "../utilities/easterEgg";
@@ -51,15 +51,11 @@ const Home = ({ homeData, allWorks }) => {
 export default Home;
 
 export async function getStaticProps() {
-  const responseHome = await axios.get(
-    "https://staging6.ljferrand.com/wp-json/wp/v2/pages/281?_fields=acf&acf_format=standard"
-  );
-  const homeData = responseHome.data;
+  // Get home page data, page ID from WordPress backend
+  const homeData = await getPageData(281);
 
-  const responseAllWork = await axios.get(
-    `https://staging6.ljferrand.com/wp-json/wp/v2/lj-project?_fields=id,slug,acf&acf_format=standard`
-  );
-  const allWorks = responseAllWork.data;
+  // Get project CPT data, use CPT slug from WP
+  const allWorks = await getPostTypeData("lj-project");
 
   return {
     props: { homeData, allWorks },

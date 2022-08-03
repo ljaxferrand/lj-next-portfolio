@@ -1,5 +1,5 @@
+import { getPageData } from "../utilities/dataFetch";
 import Head from "next/head";
-import axios from "axios";
 import Cover from "../components/Cover";
 
 const About = ({ aboutData }) => {
@@ -28,10 +28,8 @@ const About = ({ aboutData }) => {
 export default About;
 
 export async function getStaticProps() {
-  const responseAbout = await axios.get(
-    "https://staging6.ljferrand.com/wp-json/wp/v2/pages/346?_fields=acf&acf_format=standard"
-  );
-  const aboutData = responseAbout.data;
+  // Get home page data, page ID from WordPress backend
+  const aboutData = await getPageData(346);
 
   return {
     props: { aboutData },

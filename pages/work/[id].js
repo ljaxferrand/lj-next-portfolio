@@ -1,4 +1,4 @@
-import axios from "axios";
+import { getPostTypeData, getSingleCPTData } from "../../utilities/dataFetch";
 import SingleProject from "../../components/SingleProject";
 
 const WorkPage = ({ workInfo, posts }) => {
@@ -8,28 +8,22 @@ const WorkPage = ({ workInfo, posts }) => {
 export default WorkPage;
 
 export async function getStaticProps({ params }) {
-  const responseSingleWork = await axios.get(
-    `https://staging6.ljferrand.com/wp-json/wp/v2/lj-project/${params.id}?_fields=id,slug,next,previous,acf&acf_format=standard`
-  );
+  const responseSingleWork = await getSingleCPTData("lj-project", params.id);
 
-  const pagination = await axios.get(
-    "https://staging6.ljferrand.com/wp-json/wp/v2/lj-project?_fields=id,slug"
-  );
+  const pagination = await getPostTypeData("lj-project");
 
   return {
     props: {
-      workInfo: responseSingleWork.data,
-      posts: pagination.data,
+      workInfo: responseSingleWork,
+      posts: pagination,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const worksRes = await axios.get(
-    "https://staging6.ljferrand.com/wp-json/wp/v2/lj-project?_fields=id,slug"
-  );
+  const worksRes = await getPostTypeData("lj-project");
 
-  const paths = worksRes.data.map((work) => {
+  const paths = worksRes.map((work) => {
     return { params: { id: work.id.toString() } };
   });
 

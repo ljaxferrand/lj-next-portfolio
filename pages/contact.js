@@ -1,5 +1,5 @@
+import { getPageData } from "../utilities/dataFetch";
 import Head from "next/head";
-import axios from "axios";
 import Cover from "../components/Cover";
 import Cf7FormWrapper from "../components/form/Cf7FormWrapper";
 import Form from "../components/form/Form";
@@ -30,10 +30,8 @@ const Contact = ({ contactData }) => {
 export default Contact;
 
 export async function getStaticProps() {
-  const responseContact = await axios.get(
-    "https://staging6.ljferrand.com/wp-json/wp/v2/pages/373?_fields=acf&acf_format=standard"
-  );
-  const contactData = responseContact.data;
+  // Get home page data, page ID from WordPress backend
+  const contactData = await getPageData(373);
 
   return {
     props: { contactData },

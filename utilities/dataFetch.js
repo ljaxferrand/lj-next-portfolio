@@ -20,3 +20,14 @@ export async function getPostTypeData(cptName) {
   const cptData = res.data;
   return cptData;
 }
+
+// Gets WP REST API data for a Custom Post Type
+// Use CPT slug WordPress backend
+export async function getSingleCPTData(cptName, postID) {
+  const res = await axios.get(
+    `${process.env.CMS_URL}/wp-json/wp/v2/${cptName}/${postID}?_fields=id,slug,next,previous,acf&acf_format=standard`
+  );
+
+  const singleCPTdata = res.data;
+  return singleCPTdata;
+}

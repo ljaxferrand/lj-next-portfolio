@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Cover from "./Cover";
@@ -81,6 +82,20 @@ const SingleProject = ({ workInfo, projectPagination }) => {
                   __html: workInfo.acf.project_content_1,
                 }}
               ></div>
+              {/* section1_image */}
+
+              {workInfo.acf.section1_image && (
+                <img
+                  className="mx-auto w-full shadow-2xl rounded-md mb-8"
+                  sizes="(min-width: 1280px) 853px, (min-width: 1040px) 683px, (min-width: 780px) 768px, (min-width: 640px) 640px, (min-width: 500px) 485px, (min-width: 400px) 320px, calc(25vw + 225px)"
+                  srcSet={`${workInfo.acf.section1_image.url}&w=320 320w, ${workInfo.acf.section1_image.url}&w=460 460w, ${workInfo.acf.section1_image.url}&w=683 683w, ${workInfo.acf.section1_image.url}&w=853 853w, ${workInfo.acf.section1_image.url}&w=1600 1600w`}
+                  src={workInfo.acf.section1_image.url}
+                  alt={
+                    workInfo.acf.section1_image.alt ||
+                    workInfo.acf.section1_image.filename
+                  }
+                />
+              )}
             </section>
 
             <section id="section_2">

@@ -1,12 +1,12 @@
 export const fadeIn = {
   initial: {
-    y: -100,
+    y: 100,
     opacity: 0,
   },
   animate: {
     y: 0,
-    opacity: [0, 0.25, 0.4, 1],
-    transition: { type: "tween", ease: "easeIn", delay: 0.6, duration: 0.8 },
+    opacity: 1,
+    transition: { type: "tween", ease: "easeIn", delay: 0.3, duration: 0.4 },
   },
 };
 

@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Cover from "./Cover";
 import Pagination from "./Pagination";
 import InfoCard from "./InfoCard";
+import { motion } from "framer-motion";
 
 const ScrollSpyNav = dynamic(() => import("react-scrollspy-nav"), {
   ssr: false,

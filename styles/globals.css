@@ -82,7 +82,7 @@
   /* Styles for dangerouslySetHTML from individual project pages */
 
   #scrollspy li {
-    @apply pb-2;
+    @apply pb-2 hover:font-bold hover:pl-4 hover:scale-110 transition-all active:scale-90;
   }
 
   /* .scrollspy-is-active {

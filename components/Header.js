@@ -5,7 +5,7 @@ import { headerMenu } from "./menuItems";
 import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
-import { buttonNoTurn, buttonPress } from "../utilities/animations";
+import { buttonNoTurn } from "../utilities/animations";
 
 const Header = ({ data }) => {
   return (
@@ -17,7 +17,7 @@ const Header = ({ data }) => {
         <div className="lg:container mx-auto flex items-center justify-between">
           <div className="hidden sm:flex pl-2 items-center">
             <Logo />
-            <p className="hidden md:block font-heading text-2xl">
+            <p className="hidden sm:block font-heading text-2xl">
               {data.acf.site_title}
             </p>
           </div>

@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import Cover from "./Cover";
 import Pagination from "./Pagination";
 import InfoCard from "./InfoCard";
-import { motion } from "framer-motion";
 
 const ScrollSpyNav = dynamic(() => import("react-scrollspy-nav"), {
   ssr: false,
@@ -110,6 +109,21 @@ const SingleProject = ({ workInfo, projectPagination }) => {
                   __html: workInfo.acf.project_content_2,
                 }}
               ></div>
+
+              {/* section2_image */}
+
+              {workInfo.acf.section2_image && (
+                <img
+                  className="mx-auto w-full shadow-2xl rounded-md mb-8"
+                  sizes="(min-width: 1280px) 853px, (min-width: 1040px) 683px, (min-width: 780px) 768px, (min-width: 640px) 640px, (min-width: 500px) 485px, (min-width: 400px) 320px, calc(25vw + 225px)"
+                  srcSet={`${workInfo.acf.section2_image.url}&w=320 320w, ${workInfo.acf.section2_image.url}&w=460 460w, ${workInfo.acf.section2_image.url}&w=683 683w, ${workInfo.acf.section2_image.url}&w=853 853w, ${workInfo.acf.section2_image.url}&w=1200 1200w`}
+                  src={workInfo.acf.section2_image.url}
+                  alt={
+                    workInfo.acf.section2_image.alt ||
+                    workInfo.acf.section2_image.filename
+                  }
+                />
+              )}
             </section>
 
             <section id="section_3">
@@ -120,6 +134,19 @@ const SingleProject = ({ workInfo, projectPagination }) => {
                   __html: workInfo.acf.project_content_3,
                 }}
               ></div>
+
+              {workInfo.acf.section3_image && (
+                <img
+                  className="mx-auto w-full shadow-2xl rounded-md mb-8"
+                  sizes="(min-width: 1280px) 853px, (min-width: 1040px) 683px, (min-width: 780px) 768px, (min-width: 640px) 640px, (min-width: 500px) 485px, (min-width: 400px) 320px, calc(25vw + 225px)"
+                  srcSet={`${workInfo.acf.section3_image.url}&w=320 320w, ${workInfo.acf.section3_image.url}&w=460 460w, ${workInfo.acf.section3_image.url}&w=683 683w, ${workInfo.acf.section3_image.url}&w=853 853w, ${workInfo.acf.section3_image.url}&w=1200 1200w`}
+                  src={workInfo.acf.section3_image.url}
+                  alt={
+                    workInfo.acf.section3_image.alt ||
+                    workInfo.acf.section3_image.filename
+                  }
+                />
+              )}
             </section>
 
             <section id="section_4">
@@ -130,6 +157,19 @@ const SingleProject = ({ workInfo, projectPagination }) => {
                   __html: workInfo.acf.project_content_4,
                 }}
               ></div>
+
+              {workInfo.acf.section4_image && (
+                <img
+                  className="mx-auto w-full shadow-2xl rounded-md mb-8"
+                  sizes="(min-width: 1280px) 853px, (min-width: 1040px) 683px, (min-width: 780px) 768px, (min-width: 640px) 640px, (min-width: 500px) 485px, (min-width: 400px) 320px, calc(25vw + 225px)"
+                  srcSet={`${workInfo.acf.section4_image.url}&w=320 320w, ${workInfo.acf.section4_image.url}&w=460 460w, ${workInfo.acf.section4_image.url}&w=683 683w, ${workInfo.acf.section4_image.url}&w=853 853w, ${workInfo.acf.section4_image.url}&w=1200 1200w`}
+                  src={workInfo.acf.section4_image.url}
+                  alt={
+                    workInfo.acf.section4_image.alt ||
+                    workInfo.acf.section4_image.filename
+                  }
+                />
+              )}
             </section>
 
             {/* Optional Project Sections */}
@@ -144,6 +184,19 @@ const SingleProject = ({ workInfo, projectPagination }) => {
                     __html: workInfo.acf.project_content_5,
                   }}
                 ></div>
+
+                {workInfo.acf.section5_image && (
+                  <img
+                    className="mx-auto w-full shadow-2xl rounded-md mb-8"
+                    sizes="(min-width: 1280px) 853px, (min-width: 1040px) 683px, (min-width: 780px) 768px, (min-width: 640px) 640px, (min-width: 500px) 485px, (min-width: 400px) 320px, calc(25vw + 225px)"
+                    srcSet={`${workInfo.acf.section5_image.url}&w=320 320w, ${workInfo.acf.section5_image.url}&w=460 460w, ${workInfo.acf.section5_image.url}&w=683 683w, ${workInfo.acf.section5_image.url}&w=853 853w, ${workInfo.acf.section5_image.url}&w=1200 1200w`}
+                    src={workInfo.acf.section5_image.url}
+                    alt={
+                      workInfo.acf.section5_image.alt ||
+                      workInfo.acf.section5_image.filename
+                    }
+                  />
+                )}
               </section>
             )}
             {workInfo.acf.project_content_6 && (
@@ -157,6 +210,19 @@ const SingleProject = ({ workInfo, projectPagination }) => {
                     __html: workInfo.acf.project_content_6,
                   }}
                 ></div>
+
+                {workInfo.acf.section6_image && (
+                  <img
+                    className="mx-auto w-full shadow-2xl rounded-md mb-8"
+                    sizes="(min-width: 1280px) 853px, (min-width: 1040px) 683px, (min-width: 780px) 768px, (min-width: 640px) 640px, (min-width: 500px) 485px, (min-width: 400px) 320px, calc(25vw + 225px)"
+                    srcSet={`${workInfo.acf.section6_image.url}&w=320 320w, ${workInfo.acf.section6_image.url}&w=460 460w, ${workInfo.acf.section6_image.url}&w=683 683w, ${workInfo.acf.section6_image.url}&w=853 853w, ${workInfo.acf.section6_image.url}&w=1200 1200w`}
+                    src={workInfo.acf.section6_image.url}
+                    alt={
+                      workInfo.acf.section6_image.alt ||
+                      workInfo.acf.section6_image.filename
+                    }
+                  />
+                )}
               </section>
             )}
 

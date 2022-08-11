@@ -113,7 +113,7 @@
   }
 
   .post-content ul {
-    @apply list-disc pl-8;
+    @apply list-disc pl-8 text-xl;
   }
 
   .post-content a,

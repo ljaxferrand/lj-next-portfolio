@@ -35,9 +35,7 @@ Check it out live:
 ### Roadmap
 
 - [ ] Add link text to header logo per Lighthouse accessibilty audit
-- [ ] Create a DRYer section component for components/SingleProject.js
 - [ ] Add a third option for system default theme to light/dark mode
-- [ ] Add loading animation
 
 
 <p  align="right">(<a  href="#top">back to top</a>)</p>

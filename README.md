@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div  id="top"></div>
 
-## Getting Started
+# Next.js static export with WordPress CMS - Portfolio Site
 
-First, run the development server:
+### Table of Contents
+* [Overview](#overview)
+	* [Tools Used](#tools-used)
+	* [Features](#features)
+	* [Roadmap](#roadmap)
+	
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This is the current version of my personal website. A labour of love. Using the static site export capabilities of Next.js and pulling the data from a WordPress back-end via the WP REST API.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Check it out live:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+[![Link to the live site](https://img.shields.io/static/v1?label=View%20Live%20Site&message=%40%20LJFerrand%2Ecom&color=c13535&style=for-the-badge&logoWidth=20&logo=react&logoColor=blue&labelColor=c2c2c2)](https://ljferrand.com/)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<img width="539" alt="Portfolio site homepage" src="https://user-images.githubusercontent.com/87734454/184262517-96439cbc-fbb6-47c2-a831-e93555f9484d.png">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Tools Used
 
-## Learn More
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [WordPress REST API](https://developer.wordpress.org/rest-api/)
 
-To learn more about Next.js, take a look at the following resources:
+### Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-	Animations with Framer Motion
+-	Light/dark mode
+- Pulling REST data from Advanced Custom Fields
+	
+<p  align="right">(<a  href="#top">back to top</a>)</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Roadmap
 
-## Deploy on Vercel
+- [ ] Add link text to header logo per Lighthouse accessibilty audit
+- [ ] Add a third option for system default theme to light/dark mode
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p  align="right">(<a  href="#top">back to top</a>)</p>

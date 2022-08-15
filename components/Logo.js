@@ -10,6 +10,7 @@ const Logo = () => {
         whileHover={buttonPress.hover}
         initial={buttonPress.initial}
       >
+        <span className="sr-only">LJ Home Page</span>
         <svg
           className="w-16 h-16 m-4 stroke-offBlack dark:stroke-offWhite"
           xmlns="http://www.w3.org/2000/svg"

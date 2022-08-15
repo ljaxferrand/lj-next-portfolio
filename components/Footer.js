@@ -57,6 +57,7 @@ const Footer = ({ data }) => {
                 whileHover={buttonPress.hover}
                 initial={buttonPress.initial}
                 href={`mailto:${data.acf.email}?subject=Reaching%20out%20via%20your%20website%20re%3A&body=Hey%20LJ%2C%20%0A%0AI%27d%20love%20to%20chat%20about%20...`}
+                aria-label="Send LJ an email – opens email client."
               >
                 <Email />
               </motion.a>
@@ -68,7 +69,7 @@ const Footer = ({ data }) => {
                 href={data.acf.social_link_2}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub Profile – link opens in a new tab."
+                aria-label="GitHub Profile – opens in a new tab."
               >
                 <Github />
               </motion.a>
@@ -80,7 +81,7 @@ const Footer = ({ data }) => {
                 href={data.acf.social_link_1}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn Profile – link opens in a new tab."
+                aria-label="LinkedIn Profile – opens in a new tab."
               >
                 <LinkedIn />
               </motion.a>

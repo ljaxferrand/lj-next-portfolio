@@ -10,7 +10,7 @@
 	
 ## Overview
 
-This is the current version of my personal website. A labour of love. Using the static site export capabilities of Next.js and pulling the data from a WordPress back-end via the WP REST API.
+This is the current version of my portfolio website. Using the static site export capabilities of Next.js and pulling the data from a WordPress back-end via the WP REST API.
 
 Check it out live:
 
@@ -34,7 +34,7 @@ Check it out live:
 
 ### Roadmap
 
-- [ ] Add link text to header logo per Lighthouse accessibilty audit
+- [x] Add link text to header logo per Lighthouse accessibilty audit
 - [ ] Add a third option for system default theme to light/dark mode
 
 
